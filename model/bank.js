@@ -6,7 +6,7 @@ const bankSchema = Schema(
       type: String,
       required: [true, "Set name for bank"],
     },
-    InterestRate: {
+    interestRate: {
       type: String,
       required: [true, "Set interest rate"],
     },
