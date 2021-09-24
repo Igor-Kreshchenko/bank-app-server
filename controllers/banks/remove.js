@@ -1,4 +1,4 @@
-const banksOperations = require("../../model/banksData");
+const { Bank } = require("../../model");
 
 const remove = async (req, res, next) => {
   try {

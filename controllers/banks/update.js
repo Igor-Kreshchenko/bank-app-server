@@ -1,4 +1,4 @@
-const banksOperations = require("../../model/banksData");
+const { Bank } = require("../../model");
 
 const update = async (req, res, next) => {
   try {

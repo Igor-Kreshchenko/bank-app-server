@@ -1,4 +1,4 @@
-const banksOperations = require("../../model/banksData");
+const { Bank } = require("../../model");
 
 const getAll = async (_, res, next) => {
   try {
