@@ -2,7 +2,7 @@
   "name": "bank-app-server",
   "version": "1.0.0",
   "scripts": {
-    "start": "cross-env NODE_ENV=bankion node ./bin/server",
+    "start": "cross-env NODE_ENV=production node ./bin/server",
     "start:dev": "cross-env NODE_ENV=development nodemon ./bin/server"
   },
   "dependencies": {
