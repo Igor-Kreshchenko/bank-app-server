@@ -2,7 +2,7 @@ const { Bank } = require("../../model");
 
 const getAll = async (_, res, next) => {
   try {
-    const result = await Bank.find();
+    const result = await Bank.find({});
 
     res.json({ result });
   } catch (error) {
