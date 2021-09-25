@@ -3,15 +3,15 @@ const { Bank } = require("../../model");
 const getById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const bank = await banksOperations.getById(id);
+    const result = await Bank.findById(id);
 
-    if (!bank) {
+    if (!result) {
       return res.status(404).json({
         message: "Not found",
       });
     }
 
-    res.json({ bank });
+    res.json({ result });
   } catch (error) {
     next(error);
   }

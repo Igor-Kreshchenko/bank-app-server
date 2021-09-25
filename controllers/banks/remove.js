@@ -3,15 +3,15 @@ const { Bank } = require("../../model");
 const remove = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const deleteBank = await banksOperations.del(id);
+    const result = await Bank.findByIdAndDelete(id);
 
-    if (!deleteBank) {
+    if (!result) {
       return res.status(404).json({
         message: "Not found",
       });
     }
 
-    res.json({ deleteBank });
+    res.json({ result });
   } catch (error) {
     next(error);
   }
